@@ -7,8 +7,10 @@ gmtf() {
     git stash
     # 获取当前分支
     cb=$(git symbolic-ref --short -q HEAD)
-    if [ $cb = "" ]; then
+    if [ $cb ]; then
+        git stash pop
         echo "error: 请输入你要合并到哪个分支"
+        return
     fi
     git checkout $1
     git pull
