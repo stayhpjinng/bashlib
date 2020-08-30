@@ -4,10 +4,11 @@
 # 使用方式： gmtf feturexx
 gmtf() {
     git add .
-    git stash
+    git commit -a
     # 获取当前分支
     cb=$(git symbolic-ref --short -q HEAD)
-    if [ $cb ]; then
+    echo $1
+    if [ -z $1 ]; then
         git stash pop
         echo "error: 请输入你要合并到哪个分支"
         return
@@ -17,7 +18,6 @@ gmtf() {
     git merge $cb
     git push
     git checkout $cb
-    git stash pop
 }
 
 # 使用方式： gmtf1
