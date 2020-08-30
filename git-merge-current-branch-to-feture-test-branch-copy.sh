@@ -9,7 +9,6 @@ gmtf() {
     cb=$(git symbolic-ref --short -q HEAD)
     echo $1
     if [ -z $1 ]; then
-        git stash pop
         echo "error: 请输入你要合并到哪个分支"
         return
     fi
