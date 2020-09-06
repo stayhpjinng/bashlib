@@ -4,11 +4,11 @@
 ## 安装方法
 1. 克隆本项目到本地
 
-2. 在 **.bashrc** 文件中新增一行：
+2. 在 `.bashrc` 文件中新增一行：
 
 注意: 将下面用到的 /example/dir/ 替换为你本地项目所在目录
 
-**.bashrc** 文件所在位置为 **~/.bashrc**
+`.bashrc` 文件所在位置为 `~/.bashrc`
 ```shell
 # 注意将 /example/dir/ 替换为你本地项目所在目录
 /example/dir/bashlib/index.sh
