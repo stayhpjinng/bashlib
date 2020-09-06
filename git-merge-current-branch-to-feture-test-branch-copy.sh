@@ -21,35 +21,17 @@ gmtf() {
 
 # 使用方式： gmtf1
 gmtf1() {
-    git stash
-    # 获取当前分支
-    cb = $(git symbolic-ref --short -q HEAD)
-    git checkout feture-test1
-    git merge $cb
-    git checkout $cb
-    git stash pop
+    gmtf feture-test
 }
 
 # 使用方式： gmtf2
 gmtf2() {
-    git stash
-    # 获取当前分支
-    cb = $(git symbolic-ref --short -q HEAD)
-    git checkout feture-test2
-    git merge $cb
-    git checkout $cb
-    git stash pop
+    gmtf feture-test2
 }
 
 # 使用方式： gmtf3
 gmtf3() {
-    git stash
-    # 获取当前分支
-    cb = $(git symbolic-ref --short -q HEAD)
-    git checkout feture-test3
-    git merge $cb
-    git checkout $cb
-    git stash pop
+    gmtf feture-test3
 }
 
 alias gmtf="gmtf"
