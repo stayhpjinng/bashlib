@@ -48,7 +48,7 @@ jobs:
         with:
           version: 1
           # webhook中的uuid
-          uuid: ${{ secrets.feishubotid }}
+          uuid: ${{ secrets.FEISHUBOTID }}
           # 选填，快速发送的文字
           text: '新的bashlib 更新了'
           # 选填，发送的json
