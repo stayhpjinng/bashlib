@@ -46,7 +46,7 @@ jobs:
         # uses: wangsijie/feishu-bot@5d67dc90d166aa6b4de341a0bd01c979c1aeac86
         uses: wangsijie/feishu-bot@v1
         with:
-          version: 1
+          version: 2
           # webhook中的uuid
           uuid: ${{ secrets.FEISHUBOTID }}
           # 选填，快速发送的文字
