@@ -39,3 +39,51 @@ jobs:
       - name: Get Branch Info
         run: |
           echo ${{ github }}
+      
+      
+      - name: feishu bot
+        # You may pin to the exact commit or the version.
+        # uses: wangsijie/feishu-bot@5d67dc90d166aa6b4de341a0bd01c979c1aeac86
+        uses: wangsijie/feishu-bot@v1
+        with:
+          version: 1
+          # webhook中的uuid
+          uuid: ${{ feishubotid }}
+          # 选填，快速发送的文字
+          text: '新的bashlib 更新了'
+          # 选填，发送的json
+          data: |
+              {
+                "msg_type": "interactive",
+                "card": {
+                    "config": {
+                            "wide_screen_mode": true,
+                            "enable_forward": true
+                    },
+                    "elements": [{
+                            "tag": "div",
+                            "text": {
+                                    "content": "**西湖**，位于浙江省杭州市西湖区龙井路1号，杭州市区西部，景区总面积49平方千米，汇水面积为21.22平方千米，湖面面积为6.38平方千米。",
+                                    "tag": "lark_md"
+                            }
+                    }, {
+                            "actions": [{
+                                    "tag": "button",
+                                    "text": {
+                                            "content": "更多景点介绍 :玫瑰:",
+                                            "tag": "lark_md"
+                                    },
+                                    "url": "https://www.example.com",
+                                    "type": "default",
+                                    "value": {}
+                            }],
+                            "tag": "action"
+                    }],
+                    "header": {
+                            "title": {
+                                    "content": "今日旅游推荐",
+                                    "tag": "plain_text"
+                            }
+                    }
+                }
+              }
