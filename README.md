@@ -17,7 +17,9 @@
 3. 给文件授予执行权限
 ```shell
 # 权限可根据实际情况授予，授予可执行权限即可
-chomd -R 700 /example/dir/bashlib
+chmod -R 700 /example/dir/bashlib
+# 或者
+chmod u+x /example/dir/bashlib
 ```
 
 4. 重启命令行工具即可
